@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>guess me</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="animate.css" rel="stylesheet" />
+    <script defer="defer" src="socket.io/socket.io.js"></script>
+    <script defer="defer" src="js.js"></script>
+    <script defer="defer" src="io.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1073978_2dadph7njo5.css">
+</head>
+
+<body>
+    <div class="inputname animated bounceInLeft" id="inputName" >
+        <div class="header">登录</div>
+            <div class="body">
+                <label for="">用户名：</label>
+                <input type="text" class="form-control" id="loginName" style="height:30px">
+                <div class="footer">
+                <button class="btn btn-default">清空</button>
+                <button id="confirmLogin" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+    <main class="container" style="height:100%">
+        <header>你画我猜</header>
+        <div style="display: flex;flex-direction: row;">
+            <div style="width:800px;flex-grow:1" >
+                <div id="info">
+                    <span style="white-space: nowrap;"><label>绘图玩家：</label><strong id="player"></strong></span>
+                    <span style="white-space: nowrap;"><label>剩余时间：</label><strong id="time"></strong></span>
+                    <sapn style="white-space: nowrap;"><label>关键词语：</label><strong id="word"></strong></span>
+                </div>
+                <div class="border">
+                    <canvas height="410">
+                        Sorry, Your Browser don't support canvas of Html5.
+                    </canvas>
+                    <div style="background-color: #f5f5f5">
+                        <div class="ctl-row">
+                            <div class="ctl-item">
+                                <input  type="color" id="lineColor">
+                                <label for="lineColor" id="myColor">
+                                    <span id="colorIcon" class="iconfont icon-color-lens"></span>
+                                </label>
+                                <!-- <a class="btn btn-blue btn-active-able" href="javascript:delete canvas.erase;">画笔</a>
+                                <a class="btn btn-blue btn-active-able" href="javascript:canvas.erase=true;">橡皮擦</a> -->
+                                <!-- 普通笔 -->
+                                <div id="pencil" class="ctl-item">
+                                    <a id="colorIcon" class="iconfont icon-pen" href="javascript:delete canvas.erase;"></a>
+                                </div>
+                                <div id="brush" class="ctl-item"><!-- 毛笔 -->
+                                    <a id="colorIcon" class="iconfont icon-brush" href="javascript:delete canvas.erase;"></a>
+                                </div>
+                                <div id="mul" class="ctl-item"><!-- 毛笔 -->
+                                    <span id="colorIcon" class="iconfont icon-menulines"></span>
+                                </div>
+                                <a id="colorIcon" class="iconfont icon-icon-test" href="javascript:canvas.erase=true;"></a>
+                            </div>
+                            <div class="ctl-item" style="line-height:30px">
+                                <span class="text-blue fl" style="padding:0 4px 0;">线宽</span>
+                                <input id="ranger" type="range" style="width: 100px;transform: translateY(5px)" value="1" min="1" step="1" max="10" />
+                                <span>1</span>
+                            </div>
+                            <div class="fr ctl-item" id="btns">
+
+
+                                <a class="btn btn-blue" onclick="socket.emit('clear paths');" href="javascript:;">清空</a>
+                                <a class="btn btn-blue" onclick="this.href=canvas.toDataURL();"
+                                    download="png.png">下载</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <main style="width:0;height:0;visibility: hidden;">
+                        <div class="row">
+                            <div >
+                                <div id="div-users">
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+            </div>
+            <div style="width:300px;flex-grow:1;margin-top: 40px;margin-left:20px" class="border">
+                <div style="padding:10px;color:grey;background-color:#f5f5f5;border-bottom: 1px solid #ddd">历史消息</div>
+                <div id="msg">
+                </div>
+                <input type="text" id="input-msg" placeholder="输入消息或者答案，回车发送" class="form-control" style="height:30px" />
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1556157709334'); /* IE9 */
+  src: url('iconfont.eot?t=1556157709334#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOsAAsAAAAACAgAAANeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDQIMAATYCJAMQCwoABCAFhG0HSRvzBsiemjwJwrKAAhIRQLgFPB6+9ns9d3ffz4ZQgQJUDOOjoqIAW+HJk3AZXyNqbMa3bMS7L++rwgHUMysy+QsFlXx3XqeXwnl4XftIpWj6ejMA0v/7n2vq3Uo4v53NJaqpm4/2Bjge0MCiU7xANkHeMHYT5UHMJ9BjWmvC+dDRkyFRAZoF4m3INSAxpVNqMkMVOiV9C8RXjZo2prvAF/75+A+rkQiSJgNoe3E/xIb+v8QP5hWtriiCP54F2iAyVoBCPJbarklhcIWkx/mNbBOoqsQvsUlfD7aLgr3IKvzLIySZ6ABI7wPrUijzS8QYwd9JGIn/B9NkeCGNK3rxEd8k8mTlIml6U3KylOS8JPAU3ZTv7Nufh3tz97jRDe1Nt1vql1a2ci9vbqFdXNHcvnBz9qZce8+KPK1ucz93/8p8fV8AUh50Q3jIptzJWuTp08nPnmnnG05fKz7ckJLy4kXg+XP7XP3Khs11K2oDmwJKilIrzs3V5KpWrYbUIonXtSolSa6UJHdTlxw6tHJvpHweXrzUuUvn+w8Gdh344WPnrp127sJ5t/6y4MH9BQULLl7sMKPDzp3h2B8/bPDu5cSJFy+OvxQ3vld11zTvVr0dM0bMhXb55UsJZFM22eDEmvSnpnQqGT1VXDBfmCbteG34tPhEp66dumGLdbGEc6GhujRw2JduVKwGHkCbdCJnAPL7DLIu4K/c/Dj5MDuj9/+aIgO8fuyaJjrbZOjH+xH81vw/xm+ZV1wh0JdiizDP61TsUkBCDzTyn6KMeD+GYrx1OqEajyHpMgVZNYMW8go0eq1DR3UEPZYNG9xrFCOJkgQsWStAGHIdkgHfIRtyDy3kd9CY8B06hkKCHpeRM2avuQglD2JocLSJuZCELBp3kJEnB5kT0Z0bNVhSyKk6Mj/kIR3ats9GhmEc2Rgd/HluR84d4jAaI0OFxTAapcRjNIwWbxvk3OvZrp1TdqO2Fo1BsjMMMnDIRpgWIkIsVJxDi3PJufdPhFxzRRlYDa7DqkOML1Q+0UFb7Vugw2TxVrhrOcQ3j6sjjnMQDoaKIYYKFhSFQYrwymuFIQvXVrCH39NTO6mQ01bWdn5F7AmXQA9QrYQoSIIsKNB97sltOPpcte6verJFo5S1iWLcBwAAAA==') format('woff2'),
+  url('iconfont.woff?t=1556157709334') format('woff'),
+  url('iconfont.ttf?t=1556157709334') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1556157709334#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-test:before {
+  content: "\e602";
+}
+
+.icon-create:before {
+  content: "\e953";
+}
+
+.icon-color-lens:before {
+  content: "\eb99";
+}
+
